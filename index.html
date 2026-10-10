@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17251d">
+<title>VERDI | Bespoke Woodwork & Luxury Furniture</title>
+<meta name="description" content="VERDI creates bespoke woodwork and luxury furniture for homes, offices, commercial interiors and showrooms.">
+<style>
+:root{--green:#17251d;--green2:#22372b;--gold:#c4a675;--cream:#f5f1e8;--white:#fffdf8;--muted:#c3c8bf}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--green);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+button,a{-webkit-tap-highlight-color:transparent}
+.wrap{width:min(1160px,88%);margin:auto}
+header{height:auto;min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:22px;padding:18px 6%;background:#17251df5;position:sticky;top:0;z-index:20;border-bottom:1px solid #ffffff18}
+.logo{font-family:Georgia,serif;font-size:31px;letter-spacing:5px;line-height:1.2}
+.logo span{color:var(--gold)}
+.brand-sub{font-size:9px;letter-spacing:2px;color:var(--muted)}
+nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+nav a{font-size:10px;letter-spacing:1.2px;color:#f5f1e8}
+nav a:hover{color:var(--gold)}
+.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:bold}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:normal;line-height:1.2}
+h1{font-size:clamp(44px,7vw,82px);margin:24px 0}
+h1 em{color:var(--gold);font-weight:normal}
+h2{font-size:clamp(33px,4vw,51px);margin:13px 0 20px}
+h3{font-size:25px;margin:17px 0 10px}
+p{font-size:14px;line-height:1.9}
+.hero{min-height:650px;display:flex;align-items:center;position:relative;background:#17251d;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{object-position:center 55%}
+.hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#111c16 0%,#111c16e8 38%,#111c1670 75%,#111c1640)}
+.hero-content{position:relative;z-index:1;width:min(760px,88%);margin:auto;padding:100px 0}
+.hero p{max-width:570px;color:#e2e2d9;font-size:15px}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 22px;border:1px solid var(--gold);font-size:10px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;transition:.2s}
+.btn.primary{background:var(--gold);color:var(--green)}
+.btn:hover{background:var(--white);color:var(--green);border-color:var(--white)}
+.trust{background:var(--gold);color:var(--green);padding:19px 5%}
+.trust-inner{display:flex;justify-content:space-around;gap:18px;flex-wrap:wrap}
+.trust span{font-size:10px;font-weight:bold;letter-spacing:1.5px;text-align:center}
+.section{padding:95px 0}
+.section-light{background:var(--cream);color:var(--green)}
+.section-intro{max-width:680px;color:#70766d}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:42px}
+.card{min-width:0}
+.card-img{height:260px;overflow:hidden;background:#304235}
+.card-img img{transition:transform .5s}
+.card:hover .card-img img{transform:scale(1.045)}
+.card p{color:#73786f;font-size:13px}
+.card .tag{color:#a18757;font-size:10px;font-weight:bold;letter-spacing:2px;text-transform:uppercase}
+.service-card{padding:28px 22px;border:1px solid #d9d2c4}
+.service-card .num{font-family:Georgia,serif;font-size:30px;color:#b39a6b}
+.service-card h3{font-size:24px}
+.section-dark{background:var(--green2)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.split-img{height:480px;background:#2b3b30}
+.split .section-intro{color:var(--muted)}
+.checks{list-style:none;margin-top:22px}
+.checks li{padding:10px 0;border-bottom:1px solid #ffffff20;font-size:13px}
+.checks li:before{content:"✦";color:var(--gold);margin-right:12px}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:40px}
+.gallery-item{height:245px;position:relative;overflow:hidden;background:#26382c}
+.gallery-item img{transition:transform .5s}
+.gallery-item:hover img{transform:scale(1.05)}
+.gallery-item:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,#111c16a8)}
+.gallery-label{position:absolute;bottom:15px;left:16px;z-index:1;font-family:Georgia,serif;font-size:18px}
+.about-band{border-top:1px solid #ffffff20;border-bottom:1px solid #ffffff20;padding:25px 0;margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.about-band strong{display:block;color:var(--gold);font-family:Georgia,serif;font-size:25px;font-weight:normal}
+.about-band span{font-size:10px;color:var(--muted);letter-spacing:1px}
+.contact{background:#111b15;text-align:center}
+.contact .section-intro{margin:auto;color:var(--muted)}
+.contact-box{max-width:760px;margin:35px auto 0;padding:30px;border:1px solid #ffffff25}
+footer{padding:35px 6%;background:#0e1712}
+.footer-top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer p{color:var(--muted);font-size:11px}
+.footer-bottom{border-top:1px solid #ffffff20;margin-top:25px;padding-top:20px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.small{font-size:10px;letter-spacing:1px;color:var(--muted)}
+@media(max-width:800px){
+ header{align-items:flex-start;flex-direction:column;padding:17px 6%}
+ nav{gap:13px}
+ nav a{font-size:9px}
+ .hero{min-height:590px}
+ .hero-content{padding:75px 0}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+ .split{grid-template-columns:1fr;gap:30px}
+ .split-img{height:340px}
+ .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .gallery-item{height:220px}
+ .section{padding:70px 0}
+}
+@media(max-width:500px){
+ .wrap{width:88%}
+ .grid{grid-template-columns:1fr}
+ .card-img{height:250px}
+ .gallery{gap:9px}
+ .gallery-item{height:170px}
+ .gallery-label{font-size:15px;left:10px;bottom:9px}
+ .about-band{grid-template-columns:1fr;gap:15px}
+ .trust-inner{justify-content:flex-start}
+ .trust span{width:45%;text-align:left}
+ .contact-box{padding:20px 12px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#home" aria-label="VERDI Home">
+    <div class="logo">VER<span>DI</span></div>
+    <div class="brand-sub">BESPOKE WOODWORK & FURNITURE</div>
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="#home">HOME</a>
+    <a href="#services">SERVICES</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85" alt="Luxury contemporary interior with refined wood finishes" fetchpriority="high">
+  </div>
+  <div class="hero-content">
+    <div class="eyebrow">Bespoke Joinery · Custom Furniture · Premium Interiors</div>
+    <h1>Crafted in Wood.<br><em>Defined by Detail.</em></h1>
+    <p>Exceptional woodwork and made-to-measure furniture for distinguished homes, corporate environments and premium retail spaces.</p>
+    <div class="actions">
+      <a class="btn primary" href="#projects">Explore Our Work ↗</a>
+      <a class="btn" href="#contact">Discuss Your Project</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-inner">
+    <span>BESPOKE WOODWORK</span>
+    <span>CUSTOM FURNITURE</span>
+    <span>CORPORATE INTERIORS</span>
+    <span>LUXURY RESIDENTIAL</span>
+  </div>
+</div>
+
+<section class="section section-light" id="services">
+  <div class="wrap">
+    <div class="eyebrow">Our Expertise</div>
+    <h2>Crafted Around Your Vision.</h2>
+    <p class="section-intro">Every space has its own character. We create considered woodwork and furniture solutions tailored to the requirements, style and function of each project.</p>
+    <div class="grid">
+      <article class="service-card">
+        <div class="num">01</div>
+        <h3>Architectural Joinery</h3>
+        <p>Custom wall panelling, doors, wardrobes, cabinetry and carefully finished wood details.</p>
+      </article>
+      <article class="service-card">
+        <div class="num">02</div>
+        <h3>Corporate Furniture</h3>
+        <p>Executive desks, reception counters, meeting tables and tailored furniture for professional spaces.</p>
+      </article>
+      <article class="service-card">
+        <div class="num">03</div>
+        <h3>Showroom Fit-Out</h3>
+        <p>Display units, product showcases, shelving and furniture designed around your brand and space.</p>
+      </article>
+      <article class="service-card">
+        <div class="num">04</div>
+        <h3>Luxury Homes</h3>
+        <p>Made-to-measure furniture and refined joinery for living rooms, bedrooms and private residences.</p>
+      </article>
+      <article class="service-card">
+        <div class="num">05</div>
+        <h3>Custom Cabinetry</h3>
+        <p>Purpose-built storage, fitted cabinets and functional designs with a considered finish.</p>
+      </article>
+      <article class="service-card">
+        <div class="num">06</div>
+        <h3>Interior Finishing</h3>
+        <p>Coordinated materials, textures and finishing details that bring a complete interior together.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="projects">
+  <div class="wrap">
+    <div class="eyebrow">Spaces & Inspiration</div>
+    <h2>Made for Distinctive Spaces.</h2>
+    <p class="section-intro">Explore the types of environments and details that inspire our approach to bespoke furniture and interior woodwork.</p>
+    <div class="grid">
+      <article class="card">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Contemporary luxury residential interior" loading="lazy"></div>
+        <div class="tag">Residential</div>
+        <h3>Elevated Living</h3>
+        <p>Custom details and carefully coordinated finishes for elegant homes.</p>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Modern corporate office interior" loading="lazy"></div>
+        <div class="tag">Corporate</div>
+        <h3>Designed to Work</h3>
+        <p>Professional environments with purposeful layouts and bespoke furniture.</p>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=900&q=80" alt="Premium interior design and furnishings" loading="lazy"></div>
+        <div class="tag">Commercial</div>
+        <h3>Made to Stand Out</h3>
+        <p>Distinctive spaces for retail, display and customer experiences.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="woodwork">
+  <div class="wrap split">
+    <div class="split-img">
+      <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=85" alt="Elegant interior showcasing premium materials and craftsmanship" loading="lazy">
+    </div>
+    <div>
+      <div class="eyebrow">The Art of Wood</div>
+      <h2>Material Matters.<br>Details Matter More.</h2>
+      <p class="section-intro">Wood brings warmth, depth and individuality to a space. From clean contemporary lines to richly detailed finishes, our focus is on thoughtful design and precision in every element.</p>
+      <ul class="checks">
+        <li>Bespoke designs tailored to each project</li>
+        <li>Considered material and finish selections</li>
+        <li>Functional solutions with a refined aesthetic</li>
+        <li>Attention to detail from concept to completion</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="wrap">
+    <div class="eyebrow">Visual Collection</div>
+    <h2>A Closer Look at the Details.</h2>
+    <p class="section-intro">A visual inspiration gallery for residential interiors, furniture, showrooms and contemporary workspaces.</p>
+    <div class="gallery">
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=650&q=80" alt="Modern home interior" loading="lazy"><span class="gallery-label">Modern Living</span></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=650&q=80" alt="Contemporary interior details" loading="lazy"><span class="gallery-label">Interior Details</span></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=650&q=80" alt="Refined residential design" loading="lazy"><span class="gallery-label">Residential</span></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=650&q=80" alt="Professional workspace" loading="lazy"><span class="gallery-label">Workspaces</span></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=650&q=80" alt="Elegant interior atmosphere" loading="lazy"><span class="gallery-label">Quiet Luxury</span></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=650&q=80" alt="Warm finishes and furnishings" loading="lazy"><span class="gallery-label">Finishing Touches</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="about">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow">About VERDI</div>
+      <h2>Considered Design.<br>Lasting Character.</h2>
+      <p class="section-intro">VERDI focuses on bespoke woodwork and custom furniture for residential and commercial interiors. Our approach brings design, function and finishing details together to create spaces that feel cohesive and individual.</p>
+      <div class="about-band">
+        <div><strong>01</strong><span>THOUGHTFUL DESIGN</span></div>
+        <div><strong>02</strong><span>MADE TO MEASURE</span></div>
+        <div><strong>03</strong><span>REFINED FINISHES</span></div>
+      </div>
+    </div>
+    <div class="split-img">
+      <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1100&q=85" alt="Sophisticated interior with carefully selected finishes" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Let's Talk About Your Project</div>
+    <h2>Bring Your Vision to Life.</h2>
+    <p class="section-intro">Whether you are planning bespoke furniture for your home, a corporate workspace or a retail showroom, we welcome the opportunity to discuss your requirements.</p>
+    <div class="contact-box">
+      <p>Tell us about your space, your ideas and the details that matter to you.</p>
+      <div class="actions" style="justify-content:center">
+        <a class="btn primary" href="mailto:YOUR-EMAIL@example.com?subject=VERDI%20Project%20Enquiry">Email Our Team ↗</a>
+        <a class="btn" href="#home">Back to Top ↑</a>
+      </div>
+      <p style="margin-top:18px;font-size:11px;color:#c3c8bf">Replace the placeholder email with the company's real email before publishing.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <a class="logo" href="#home">VER<span>DI</span></a>
+      <p>Bespoke Woodwork & Luxury Furniture</p>
+    </div>
+    <a class="btn" href="#contact">Discuss a Project ↗</a>
+  </div>
+  <div class="footer-bottom">
+    <span class="small">CUSTOM WOODWORK · FURNITURE · INTERIORS</span>
+    <span class="small">© 2026 VERDI. ALL RIGHTS RESERVED.</span>
+  </div>
+</footer>
+</body>
+      </html>
+        
